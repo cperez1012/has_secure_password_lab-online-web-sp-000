@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      respond_to :welcome
+      redirect_to :welcome
     else
       redirect_to :new_user
     end
